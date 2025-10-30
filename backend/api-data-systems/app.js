@@ -8,6 +8,7 @@ const trips = require('./routes/trips');
 const bookings = require('./routes/bookings');
 const weather = require('./routes/weather');
 const users = require('./auth_user/users');
+const itineraries = require('./routes/itineraries');
 
 app.use(express.json());
 
@@ -15,6 +16,7 @@ app.use('/trips', trips);
 app.use('/bookings', bookings);
 app.use('/api', weather);
 app.use('/users', users);
+app.use('/itineraries', itineraries);
 
 app.listen(port, (err) => {
     if (err) console.log(err);
